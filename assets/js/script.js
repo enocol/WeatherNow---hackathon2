@@ -1,13 +1,12 @@
 import displaydata from "../js/displayData.js";
 import { resetInput } from "../js/resetInput.js";
 
-const cityInput = document.querySelector(".city-input");
 const searchButton = document.querySelector(".search-btn");
 
-// const API_KEY = "afef0a4b6a2c5afed7f5da4a756f41d9";
-const apiKey = "a87753a0f261d957d6d0e8f464a72ec2";
-
 function getWeatherData() {
+  const cityInput = document.querySelector(".city-input");
+  // const API_KEY = "afef0a4b6a2c5afed7f5da4a756f41d9";
+  const apiKey = "a87753a0f261d957d6d0e8f464a72ec2";
   const cityName = cityInput.value.trim().toLowerCase();
   if (cityName === "") {
     const error = document.getElementById("error");
