@@ -1,28 +1,25 @@
+const cityInput = document.querySelector(".city-input");
+const searchButton = document.querySelector(".search.btn");
 
-const form = document.querySelector("form class name");
-const search = document.querySelector("search bar class");
-const weatherBox = document.querySelector("weather box class");
-const weatherDetails = document.querySelector("weather details");
-const errorMessage = document.querySelector("Error message");
+const API_KEY = "afef0a4b6a2c5afed7f5da4a756f41d9";
 
-search.addEventListener('click', () => {
+const getWeatherDetails = (cityName, lat, lon) => {
+    const WEATHER_API_URL = `api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+}
 
-    const APIKey = 'afef0a4b6a2c5afed7f5da4a756f41d9';
-    const city = document.querySelector('search-box input').value;
+const getCityCoordinates = () => {
+const cityName = cityInput.value.trim();
+if(!cityName) return;
+const GEOCODING_API_URL = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`
 
-    if (city == '')
-       return;
+fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
+    if(!data.length) return alert(`No coodinates found for ${cityName}`);
+    const { name, lat, lon } = data[0];
+    getWeatherDetails();
+  }).catch(() => {
+    alert("An error occured while fetching the coordinates!");
 
-       fetch(`https://api.openweathermap.org/data/2.5/weather?q= ${city}&units=metric&appid=${APIKey}`)
-       .then (response => response.json()).then(json => {
-        
-        const image = document.querySelector('insert weather image class');
-        const tempreture = document.querySelector('insert tempreture class');
-        const description = document.querySelector('insert weather description class');
-        const humidity = document.querySelector('insert humidity class');
-        const wind = document.querySelector('insert wind class');
+  });
+}
 
-       });
-
-
-});
+searchButton.addEventListener("click", getCityCoordinates);
