@@ -3,18 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css"> 
     <title>WeatherNow</title>
 </head>
 <body>
-    <nav></nav>
-    <main>
+    <h1>Weather Now</h1>
+    <div class="container">
+        <div class="weather-input">
+            <h3>Enter a City Here</h3>
+            <input type="text"
+            class="city-input"
+            placeholder="E.g., Berlin, London, Oslo">
+            <button class="search-btn">Search</button>
+            <div class="separator"></div>
+            <button class="location-btn">Weather in your Location</button>
+        </div>
+        <div class="weather-data">
+            <div class="current-weather">
+                <div class="details">
+                    <h2>Miami(2024-02-05)</h2>
+                    <h4>Tempratur:21.5°C</h4>
+                    <h4>Wind: 4.31 M/S</h4>
+                    <h4>Humidity: 81%</h4>
+                </div>
+                <div class="icon">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">
+                    <h4>Moderate Rain</h4>
+                </div>
 
-        <div></div>
-
-
-
-
-    </main>
+            </div>
+            <div class="days-forecast">
+            <h2>5-Day Forecast</h2>
+            <ul class="weather-cards">
+                <li class="card">
+                    <h3>Monday</h3>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">       
+                    <h4>Temp:21.5°C</h4>
+                    <h4>Wind: 4.31 M/S</h4>
+                    <h4>Humidity: 81%</h4>  
+                </li>
+                <li class="card">
+                    <h3>Tuesday</h3>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">       
+                    <h4>Temp:21.5°C</h4>
+                    <h4>Wind: 4.31 M/S</h4>
+                    <h4>Humidity: 81%</h4>  
+                </li>
+                <li class="card">
+                    <h3>Wednesday</h3>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">       
+                    <h4>Temp:21.5°C</h4>
+                    <h4>Wind: 4.31 M/S</h4>
+                    <h4>Humidity: 81%</h4>  
+                </li>
+                <li class="card">
+                    <h3>Thursday</h3>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">       
+                    <h4>Temp:21.5°C</h4>
+                    <h4>Wind: 4.31 M/S</h4>
+                    <h4>Humidity: 81%</h4>  
+                </li>
+                <li class="card">
+                    <h3>Friday</h3>
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">       
+                    <h4>Temp:21.5°C</h4>
+                    <h4>Wind: 4.31 M/S</h4>
+                    <h4>Humidity: 81%</h4>  
+                </li>
+            </ul>
+        </div>
+        </div>
+    </div>
     <footer></footer>
 </body>
 <script> </script>
