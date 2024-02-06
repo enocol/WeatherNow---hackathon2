@@ -12,6 +12,7 @@
       <div class="weather-input">
         <h3>Enter a City Here</h3>
         <input
+          id="city-input"
           type="text"
           class="city-input"
           placeholder="E.g., Berlin, London, Oslo"
@@ -21,12 +22,13 @@
         <button class="location-btn">Weather in your Location</button>
       </div>
       <div class="weather-data">
+        <p id="error"></p>
         <div class="current-weather">
           <div class="details">
             <h2></h2>
-            <h4>Tempreture: __ °C</h4>
-            <h4>Wind: __ M/S</h4>
-            <h4>Humidity: __%</h4>
+            <h4>Tempreture: <span id="temperature"></span>°C</h4>
+            <h4>Wind: <span id="wind-speed"></span>M/S</h4>
+            <h4>Humidity:<span id="humidity"></span>%</h4>
           </div>
         </div>
         <div class="days-forecast">
