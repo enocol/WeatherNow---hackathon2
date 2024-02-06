@@ -165,6 +165,11 @@ h1 {
     text-align: center;
   }
 
+  #weather-icon {
+    right: 5px;
+    top: 50px;
+  }
+
   .weather-cards {
     flex-direction: column;
   }
