@@ -15,7 +15,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
                 </div>
                 <div class="icon">
                 <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather-icon">
-                <h4>Moderate Rain</h4>
+                <h4>${weatherItem.weather[0].description}</h4>
                 </div>`
     } else {
     return `  
