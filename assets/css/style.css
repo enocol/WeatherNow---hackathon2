@@ -115,15 +115,6 @@ h1 {
 }
 
 .weather-cards .card {
-<<<<<<< HEAD
-    list-style: none;
-    color:white;
-    background:grey;
-    padding: 18px 16px;
-    background: px;
-    border-radius: 5px;
-    width: calc(100% / 5);
-=======
   list-style: none;
   color: #000; /* to check color */
   background: #6c75;
@@ -132,7 +123,6 @@ h1 {
   border-radius: 5px;
   margin: 1px;
   width: 20%;
->>>>>>> 79d2e6a7d56ceadcff22b9dd611264c096412f6c
 }
 
 .weather-cards .card img {
