@@ -14,6 +14,15 @@ h1 {
   color: beige;
 }
 
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+
 .container {
   display: flex;
   gap: 35px;
@@ -80,7 +89,7 @@ h1 {
   padding: 20px 60px 20px 20px;
   background: #5372f0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .current-weather h2 {
@@ -135,6 +144,19 @@ h1 {
   margin-bottom: 20px;
   height: 20px;
   font-size: 25px;
+}
+
+#weather-condition {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#weather-icon {
+  width: 100px;
+  position: absolute;
+  right: 100px;
+  top: 30px;
 }
 
 @media screen and (max-width: 616px) {

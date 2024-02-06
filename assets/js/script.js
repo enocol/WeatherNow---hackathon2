@@ -2,7 +2,6 @@ import displaydata from "../js/displayData.js";
 import { resetInput } from "../js/resetInput.js";
 
 const cityInput = document.querySelector(".city-input");
-
 const searchButton = document.querySelector(".search-btn");
 
 // const API_KEY = "afef0a4b6a2c5afed7f5da4a756f41d9";
