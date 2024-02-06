@@ -1,5 +1,6 @@
 function displaydata(data) {
-  return "displaying data...";
+  const cityName = document.querySelector(".details h2");
+  cityName.textContent = data.name;
 }
 
 export default displaydata;
