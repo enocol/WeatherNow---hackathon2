@@ -1,39 +1,65 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+ # Weather Now App || Hackathon2_Project
+Weather_Now App is a app to check the weather in your current location and all over the world. Weather is something difficult to predict.This accurate weather app allows to find out a essential detailed forecast wherever you are, for any time of the day.
 
-Welcome,
+# Getting Started
+Make sure you have the following installed: - Web browser - Code editor (e.g., Visual Studio Code) 
+1. Clone the repository
+2. Open the project in your code editor.
+3. Open index.html in your web browser to view the main page.
+   
+ write the name of the city you wand to know the weather and  Click on the button search to have all informations.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+# UX
+Userstories 
+1. As a user, I want a user-friendly app or website that allows me to quickly find the weather in my current location or city of my choice all over the world.
+2. As a user, I want,
+   
+# Existing Features
+![Alt text](images/image.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+4.Footer Elements:
+A footer provided a consistent place for important links and information, making it easy for users to navigate or find essential details about the website. Which included copyright information and privacy policies.
 
-## Codeanywhere Reminders
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+# Testing
+We employed two testing tools to ensure the error-free nature of our code. we utilized validator testing tools, such as:
+1. Nu Html Checker (w3.org): identifies potential issues affecting webpage functionality.
+2. W3C CSS Validator for TextArea (CSS level 3 + SVG): identifies and highlighting errors or warnings that may impact the styling of our web pages.
 
-`python3 -m http.server`
+During the validation process, errors were detected, signifying areas for improvement. Recognizing and addressing these syntax errors is crucial for ongoing development, ensuring our code remains free of potential issues. Moving forward, we are committed to addressing identified problems and to uphold code quality.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+# Responsive Test
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
 
-`http_server`
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Issues Fixed
+1. HTML (index.html):
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+2. CSS (style.css, style2.css):
+Enhanced overall styling for a more visually appealing look.
+Adjusted font sizes, margins, and paddings for better responsiveness.
+Made the layout more flexible using flex containers.
+Adjusted media queries for better responsiveness on various screen sizes.
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+4. Javascript:
 
-To log into the Heroku toolbelt CLI:
+5. File Cleanup:
+Removed unnecessary and duplicated styles.
+Ensured proper indentation and formatting for better code readability.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+# Deployment
+We deployed the project with the following steps:
+Access Repository Settings:
+1.	
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+# issues
+ Github functionality ( pull request and merge )
+ Balsamiq functionality (icon)
+ Readme ( uploading the Wireframe on section Features)
 
----
+# Credits
+The links for were copied from Google search. The photos used in this site were obtained from Unsplash and Google images.
+We received inspiration for this project from Hackathon2´s example Project 4. 
+.
 
-Happy coding!
+
