@@ -131,6 +131,11 @@ h1 {
 }
 
 @media screen and (max-width: 616px) {
+  h2,
+  h3 {
+    text-align: center;
+  }
+
   .weather-cards {
     flex-direction: column;
   }
@@ -147,6 +152,11 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  h2,
+  h3 {
+    text-align: center;
+  }
+
   .container {
     flex-wrap: wrap;
     padding: 5px;
