@@ -7,8 +7,9 @@ const humidity = document.querySelectorAll(".card .humidity");
 const currentCity = document.getElementById("current-city");
 
 export async function fiveDaysFocast() {
-  let waitingData = document.getElementById("error");
-  waitingData.innerText = "Loading...";
+  let waitingData = document.getElementById("loading-data");
+  waitingData.innerText = "Loading weather data...Please wait...";
+
   const cityName = await getCurrentCity();
   const apiKey = "a87753a0f261d957d6d0e8f464a72ec2";
   const queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
