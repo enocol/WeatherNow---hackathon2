@@ -1,4 +1,4 @@
- # Weather Now App || Hackathon2_Project
+ # Weather Now App || Hackathon2_Team_Street.Code
 Weather_Now App is a app to check the weather in your current location and all over the world. Weather is something difficult to predict.This accurate weather app allows to find out a essential detailed forecast wherever you are, for any time of the day.
 
 # Getting Started

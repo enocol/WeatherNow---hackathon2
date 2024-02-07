@@ -198,3 +198,45 @@ h1 {
     width: calc(100% / 4 -15px);
   }
 }
+
+footer {
+  background-image:url();
+}
+
+.socialIcons{
+  display:flex;
+  justify-content: center;
+  
+}
+.socialIcons a{
+  text-decoration: none;
+  padding: 10px;
+  background-color: rgb(229, 246, 244);
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.socialIcons a:hover {
+  color:#5372f0;
+  transition:0.5s;
+}
+
+.footerBottom{
+  background-color: #5371cc;
+  padding: 20px;
+  text-align: center;
+  color: aliceblue;
+}
+
+.designer {
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0px 2px;
+
+}
+
+.footer {
+  background-color: #5372f0;
+}
+
