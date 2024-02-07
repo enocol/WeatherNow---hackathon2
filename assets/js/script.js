@@ -1,104 +1,43 @@
-const cityInput = document.querySelector(".city-input");
+import displaydata from "../js/displayData.js";
+import { resetInput } from "../js/resetInput.js";
+import onLoad from "../js/loadWindow.js";
+import { fiveDaysFocast } from "../js/fiveDaysFocast.js";
+
 const searchButton = document.querySelector(".search-btn");
-const locationButton = document.querySelector(".location-btn");
-const currentWeatherDiv = document.querySelector(".current-weather");
-const  weatherCardsDiv = document.querySelector(".weather-cards");
+const currentCity = document.getElementById("location-btn");
 
-const API_KEY = "a6d0654415ee19196e7f1b89fc5b0455";
-
-const createWeatherCard = (cityName, weatherItem, index) => {
-    if(index === 0) {
-        return `<div class="details">
-                <h2>${cityName} (${weatherItem.dt_txt.split(" ")[0]})</h2>
-                <h4>Temperature: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h4>
-                <h4>Wind: ${weatherItem.wind.speed} M/S</h4>
-                <h4>Humidity: ${weatherItem.main.humidity} %</h4> 
-                </div>
-                <div class="icon">
-                <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather-icon">
-                <h4>${weatherItem.weather[0].description}</h4>
-                </div>`;
-    } else {
-    return `  
-    <li class="card">
-    <h3>${weatherItem.dt_txt.split(" ")[0]}</h3>
-    <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="weather-icon">       
-    <h4>Temp: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</h4>
-    <h4>Wind: ${weatherItem.wind.speed} M/S</h4>
-    <h4>Humidity: ${weatherItem.main.humidity} %</h4>  
-    </li>`;
-   }
-}
-
-const getWeatherDetails = (cityName, latitude, longitude) => {
-    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${API_KEY}`;
-
-    fetch(WEATHER_API_URL).then(response => response.json()).then(data => {
-
-        const uniqueForecastDays = [];
-        const fiveDaysForecast = data.list.filter(forecast => {
-            const forecastDate = new Date(forecast.dt_txt).getDate();
-            if (!uniqueForecastDays.includes(forecastDate)) {
-               return uniqueForecastDays.push(forecastDate);
-            
-            }
-         
-        });
-
-        cityInput.value = "";
-        currentWeatherDiv.innerHTML = "";
-        weatherCardsDiv.innerHTML = "";
-
-        
-        fiveDaysForecast.forEach((weatherItem, index) => {
-            const html = createWeatherCard(cityName, weatherItem, index);
-            if (index === 0) {
-                currentWeatherDiv.insertAdjacentHTML("beforeend", html);
-            } else {
-                weatherCardsDiv.insertAdjacentHTML("beforeend", html);
-            }
-        });
-    }).catch(() => {
-        alert("An error occured while fetching the forecast!");
+function getWeatherData() {
+  const cityInput = document.querySelector(".city-input");
+  // const API_KEY = "afef0a4b6a2c5afed7f5da4a756f41d9";
+  const apiKey = "a87753a0f261d957d6d0e8f464a72ec2";
+  const cityName = cityInput.value.trim().toLowerCase();
+  if (cityName === "") {
+    const error = document.getElementById("error");
+    error.textContent = "Please enter a city name";
+    setTimeout(() => {
+      error.textContent = "";
+    }, 2000);
+    return;
+  }
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.cod >= "404" && data.cod < "500") {
+        const error = document.getElementById("error");
+        error.textContent = "City not found";
+        setTimeout(() => {
+          error.textContent = "";
+        }, 2000);
+        return;
+      }
+      displaydata(data);
+      resetInput();
     });
 }
 
-const getCityCoordinates = () => {
-const cityName = cityInput.value.trim();
-if (cityName === "") return;
-const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
-    
-// Get entered city coordinates (latitude, longitude, and name) from the API response
-fetch(API_URL).then(response => response.json()).then(data => {
-    if (!data.length) return alert(`No coordinates found for ${cityName}`);
-    const { lat, lon, name } = data[0];
-    getWeatherDetails(name, lat, lon);
-}).catch(() => {
-    alert("An error occurred while fetching the coordinates!");
-});
-}
-const getUserCoordinates = () => {
-    navigator.geolocation.getCurrentPosition(
-        position => {
-            const { latitude, longitude } = position.coords; // Get coordinates of user location
-            // Get city name from coordinates using reverse geocoding API
-            const API_URL = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${API_KEY}`;
-            fetch(API_URL).then(response => response.json()).then(data => {
-                const { name } = data[0];
-                getWeatherDetails(name, latitude, longitude);
-            }).catch(() => {
-                alert("An error occurred while fetching the city name!");
-            });
-        },
-        error => { // Show alert if user denied the location permission
-            if (error.code === error.PERMISSION_DENIED) {
-                alert("Geolocation request denied. Please reset location permission to grant access again.");
-            } else {
-                alert("Geolocation request error. Please reset location permission.");
-            }
-        });
-}
-locationButton.addEventListener("click", getUserCoordinates);
+searchButton.addEventListener("click", getWeatherData);
+window.addEventListener("load", onLoad);
+currentCity.addEventListener("click", fiveDaysFocast);
+window.addEventListener("load", fiveDaysFocast);
 
-searchButton.addEventListener("click", getCityCoordinates);
-cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
