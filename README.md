@@ -7,7 +7,7 @@ Make sure you have the following installed: - Web browser - Code editor (e.g., V
 2. Open the project in your code editor.
 3. Open index.html in your web browser to view the main page.
    
- write the name of the city you wand to know the weather and  Click on the button search to have all informations.
+ write the name of the city you wand to know the weather and  Click on the button search to have all informations.The Weather Icon will change between day and night depending on the information from the API.
 
 # UX
 Design
