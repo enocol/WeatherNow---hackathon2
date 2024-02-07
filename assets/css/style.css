@@ -6,6 +6,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+/* body {
+  background: #000;
+} */
+
 h1 {
   background-color: blue;
   text-align: center;
@@ -159,6 +163,12 @@ h1 {
   top: 30px;
 }
 
+#loading-data {
+  color: red;
+  font-size: large;
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 616px) {
   h2,
   h3 {
@@ -234,15 +244,14 @@ h1 {
 }
 
 footer {
-  background-image:url();
+  background-image: url();
 }
 
-.socialIcons{
-  display:flex;
+.socialIcons {
+  display: flex;
   justify-content: center;
-  
 }
-.socialIcons a{
+.socialIcons a {
   text-decoration: none;
   padding: 10px;
   background-color: rgb(229, 246, 244);
@@ -251,11 +260,11 @@ footer {
 }
 
 .socialIcons a:hover {
-  color:#5372f0;
-  transition:0.5s;
+  color: #5372f0;
+  transition: 0.5s;
 }
 
-.footerBottom{
+.footerBottom {
   background-color: #5371cc;
   padding: 20px;
   text-align: center;
@@ -267,10 +276,8 @@ footer {
   text-transform: uppercase;
   font-weight: 400;
   margin: 0px 2px;
-
 }
 
 .footer {
   background-color: #5372f0;
 }
-
