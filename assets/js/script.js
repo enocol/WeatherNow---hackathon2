@@ -40,3 +40,4 @@ searchButton.addEventListener("click", getWeatherData);
 window.addEventListener("load", onLoad);
 currentCity.addEventListener("click", fiveDaysFocast);
 window.addEventListener("load", fiveDaysFocast);
+
