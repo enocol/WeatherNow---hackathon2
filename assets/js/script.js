@@ -1,7 +1,10 @@
 import displaydata from "../js/displayData.js";
 import { resetInput } from "../js/resetInput.js";
+import onLoad from "../js/loadWindow.js";
+import { fiveDaysFocast } from "../js/fiveDaysFocast.js";
 
 const searchButton = document.querySelector(".search-btn");
+const currentCity = document.getElementById("location-btn");
 
 function getWeatherData() {
   const cityInput = document.querySelector(".city-input");
@@ -30,8 +33,10 @@ function getWeatherData() {
       }
       displaydata(data);
       resetInput();
-      console.log(data);
     });
 }
 
 searchButton.addEventListener("click", getWeatherData);
+window.addEventListener("load", onLoad);
+currentCity.addEventListener("click", fiveDaysFocast);
+window.addEventListener("load", fiveDaysFocast);

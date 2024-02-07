@@ -3,7 +3,6 @@ function displaydata(data) {
   const cityName = document.querySelector(".details h2");
   const weatherType = document.getElementById("weather-type");
   weatherType.innerText = data.weather[0].main;
-  console.log(weatherType);
   const temperature = document.getElementById("temperature");
   cityName.textContent = data.name;
   temperature.textContent = Math.round(data.main.temp - 273);
@@ -18,12 +17,12 @@ function displaydata(data) {
     img.src = "assets/images/Images_Hackathon2/Weather_icons/rain.png";
   } else if (data.weather[0].main === "Clear") {
     img.src = "assets/images/Images_Hackathon2/Weather_icons/clear-sky.png";
-    //   } else if (data.weather[0].main === "Snow") {
-    //     img.src = "assets/images/snow.png";
+  } else if (data.weather[0].main === "Snow") {
+    img.src = "assets/images/Images_Hackathon2/Weather_icons/snowflake.png";
     //   } else if (data.weather[0].main === "Mist")
     //     document.getElementById("weather-icon").src = "assets/images/mist.png";
-    //   else {
-    //     img.src = "assets/images/cloudy.png";
+  } else {
+    img.src = "";
   }
 }
 
