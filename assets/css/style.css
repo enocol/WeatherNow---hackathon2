@@ -1,13 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Poppins&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Poppins&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Open Sans", sans-serif;
+  text-decoration: none;
 }
 
 /* body {
@@ -17,12 +16,12 @@
 /** nav logo**/
 
 h1 {
-  background-color:black;
+  background-color: black;
   text-align: center;
   padding: 10px 10px 10px 10px;
   font-size: 3rem;
-  color:white;
-  font-family: 'Montserrat';
+  color: white;
+  font-family: "Montserrat";
   font-weight: 300;
   /*text-decoration: underline;
   text-decoration-thickness: 1px;*/
@@ -53,7 +52,7 @@ h1 {
   border: 1px solid #ccc;
   border-radius: 4px;
   margin: 10px 0 20px 0;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 /**buttons / hover over effect / in effect**/
@@ -71,12 +70,12 @@ h1 {
 }
 
 .weather-input button:hover {
-  background-color: #333; 
+  background-color: #333;
 }
 
 .weather-input button:active {
   transform: translateY(1px);
-  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
 }
 
 .weather-input .separator {
@@ -277,7 +276,7 @@ footer {
   justify-content: center;
 }
 
-.socialIcons a{
+.socialIcons a {
   color: black;
   text-decoration: none;
   padding: 5px;
@@ -294,13 +293,11 @@ footer {
 .footerBottom {
   background-color: #5371cc;
   color: white;
-  transition:0.4s;
+  transition: 0.4s;
   background-color: #000;
   text-align: center;
-   padding: 20px;
+  padding: 20px;
 }
-
-
 
 .designer {
   opacity: 0.6;
