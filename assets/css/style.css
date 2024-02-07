@@ -13,8 +13,8 @@
 /** nav logo**/
 h1 {
   background-color:black;
-  text-align: center;
-  padding: 10px 10px 10px 10px;
+  text-align: left;
+  padding: 10px 10px 10px 30px;
   font-size: 3rem;
   color:white;
   font-family: 'Montserrat';
@@ -54,7 +54,7 @@ h1 {
 /**buttons / hover over effect / in effect**/
 .weather-input button {
   width: 100%;
-  padding: 10px 0;
+  padding: 10px;
   cursor: pointer;
   color: white;
   font-size: 1rem;
@@ -66,7 +66,10 @@ h1 {
 }
 
 .weather-input button:hover {
-  background-color: #333; 
+ background-color: rgb(27, 27, 27);
+  transform: translateY(0px);
+  border-width: 0.2px;
+  border-color: white;
 }
 
 .weather-input button:active {
@@ -74,7 +77,28 @@ h1 {
   box-shadow: 0 0 2px rgba(0,0,0,0.5);
 }
 
-.weather-input .separator {
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.5px);
+        /* Move button up */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Return button to its original position */
+    }
+}
+
+.weather-input button.bounce {
+    animation: bounce 0.2s;
+}
+
+
+.separator {
   height: 1px;
   width: 100%;
   margin: 25px 0;
@@ -146,13 +170,13 @@ h1 {
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
+/*3 hour card styling*/
 .weather-cards .card {
   list-style: none;
-  color: #000; /* to check color */
-  background: #6c75;
+  color: black;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(54, 54, 54, 0.562);
   padding: 8px;
-  background: px;
   border-radius: 5px;
   margin: 1px;
   width: 20%;
@@ -200,12 +224,14 @@ h1 {
 
   .weather-cards .card {
     width: 98%;
+    margin-bottom: 20px;
   }
 
   .card {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
 }
 
@@ -223,6 +249,7 @@ h1 {
   .weather-cards {
     padding: 5px;
     margin: 5px;
+   
   }
   .weather-input {
     width: 100%;
@@ -243,6 +270,10 @@ h1 {
   .weather-cards .card {
     width: calc(100% / 3 -15px);
   }
+   .card-hidden {
+       display: none;
+   }
+   
 }
 
 @media (max-width: 1400px) {
@@ -254,7 +285,9 @@ h1 {
   }
   .weather-cards .card {
     width: calc(100% / 4 -15px);
+    
   }
+  
 }
 
 footer {
