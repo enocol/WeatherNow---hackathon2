@@ -10,7 +10,12 @@
   font-family: "Open Sans", sans-serif;
 }
 
+/* body {
+  background: #000;
+} */
+
 /** nav logo**/
+
 h1 {
   background-color:black;
   text-align: left;
@@ -207,6 +212,12 @@ h1 {
   top: 30px;
 }
 
+#loading-data {
+  color: red;
+  font-size: large;
+  margin-bottom: 20px;
+}
+
 @media screen and (max-width: 616px) {
   h2,
   h3 {
@@ -291,14 +302,14 @@ h1 {
 }
 
 footer {
-  background-image:url();
+  background-image: url();
 }
 
-.socialIcons{
-  display:flex;
+.socialIcons {
+  display: flex;
   justify-content: center;
-  
 }
+
 .socialIcons a{
   color: black;
   text-decoration: none;
@@ -309,28 +320,28 @@ footer {
 }
 
 .socialIcons a:hover {
+  color: #5372f0;
+  transition: 0.5s;
+}
+
+.footerBottom {
+  background-color: #5371cc;
   color: white;
   transition:0.4s;
   background-color: #000;
-  
+  text-align: center;
+   padding: 20px;
 }
 
-.footerBottom{
-  background-color: black;
-  padding: 20px;
-  text-align: center;
-  color: white;
-}
+
 
 .designer {
   opacity: 0.6;
   text-transform: uppercase;
   font-weight: 400;
   margin: 0px 2px;
-
 }
 
 .footer {
   background-color: black;
 }
-
