@@ -14,11 +14,13 @@
 h1 {
   background-color:black;
   text-align: center;
-  padding: 10px 20px;
+  padding: 10px 10px 10px 10px;
   font-size: 3rem;
   color:white;
   font-family: 'Montserrat';
   font-weight: 300;
+  /*text-decoration: underline;
+  text-decoration-thickness: 1px;*/
 }
 
 .details {
@@ -111,6 +113,7 @@ h1 {
   background-color: rgba(192, 192, 192, 0.5);
   display: flex;
   justify-content: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .current-weather h2 {
@@ -264,23 +267,26 @@ footer {
   
 }
 .socialIcons a{
+  color: black;
   text-decoration: none;
-  padding: 10px;
-  background-color: rgb(229, 246, 244);
-  margin: 5px;
+  padding: 5px;
+  background-color: white;
+  margin: 1px 20px 0px 20px;
   border-radius: 50%;
 }
 
 .socialIcons a:hover {
-  color:#5372f0;
-  transition:0.5s;
+  color: white;
+  transition:0.4s;
+  background-color: #000;
+  
 }
 
 .footerBottom{
-  background-color: #5371cc;
+  background-color: black;
   padding: 20px;
   text-align: center;
-  color: aliceblue;
+  color: white;
 }
 
 .designer {
@@ -292,6 +298,6 @@ footer {
 }
 
 .footer {
-  background-color: #5372f0;
+  background-color: black;
 }
 
