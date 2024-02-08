@@ -38,6 +38,16 @@ This project was developed with the following technologies:
 4.Footer Elements:
 A footer provided a consistent place for important links and information, making it easy for users to navigate or find essential details about the website. Which included copyright information and privacy policies.
 
+# Benefits of WeatherNow
+Make confident decisions by using this awesome weather App in order to get the current weather forecast for any city. WeatherNow has loads of features. However, the following list is a glimpse of that huge features list:
+Awesome UI app.
+Easy to use.
+For free available.
+Available SourceCode.
+Your current conditions.
+A 5-Day forecast.
+Switching to your current locations based on your computer's Location Services.
+
 # API Usage
 The WeatherNow App t uses the OpenWeatherMap API to get the current weather. OpenWeatherMap API is free to use for smaller-scale applications. Large applications with bigger user bases may need to opt into one of the paid plans in order to satisfy the higher call–per-minute needs. The free tier comes with the following restrictions:
 1,200 API calls per minute
