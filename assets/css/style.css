@@ -315,6 +315,39 @@ header nav div {
   margin: 1px;
 }
 
+.humidity {
+  background-color: #f3ef0f;
+  color: #000;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: small;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+
+.wind {
+  color: #000;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: small;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.temp {
+  color: #000;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: small;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
+
 @media screen and (max-width: 616px) {
   h2,
   h3 {

@@ -24,6 +24,24 @@ function displaydata(data) {
   } else {
     img.src = "";
   }
+
+  if (windSpeed.textContent > 5) {
+    windSpeed.style.color = "red";
+  } else {
+    windSpeed.style.color = "green";
+  }
+
+  if (humidity.textContent > 90) {
+    humidity.style.color = "red";
+  } else {
+    humidity.style.color = "green";
+  }
+
+  if (temperature.textContent < 5) {
+    temperature.style.color = "red";
+  } else {
+    temperature.style.color = "green";
+  }
 }
 
 export default displaydata;

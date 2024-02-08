@@ -3,7 +3,7 @@ import { resetInput } from "../js/resetInput.js";
 import onLoad from "../js/loadWindow.js";
 import { fiveDaysFocast } from "../js/fiveDaysFocast.js";
 import { toggleBackground } from "../js/toggleBackground.js";
-import { currentCityWeather } from "../js/currentLocationWeather.js";
+// import { currentCityWeather } from "../js/currentLocationWeather.js";
 import { fiveDaysFocastCurrentWeather } from "./fiveDaysFocastCurrentWeather.js";
 
 const searchButton = document.querySelector(".search-btn");
