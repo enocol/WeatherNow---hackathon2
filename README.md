@@ -14,37 +14,50 @@ Make sure you have the following installed: - Web browser - Code editor (e.g., V
 
 # UX
 - Design
-     § Wireframe : Balsalmiq
+     ° Wireframe : Balsalmiq
 
   < img src="![WeatherNow_Wireframe](https://github.com/Taylor-Carr/WeatherNow---hackathon2/assets/152321059/705eeef3-a0db-4622-9091-3d4ec15e20ac)"width="125px" height="65px"> 
  
 
 
-Userstories 
-1. As a user, I want a user-friendly app or website that allows me to quickly find the weather in my current location or city of my choice all over the world.
-2. As a user, I want,
+- Userstories 
+   °  As a user, I want a user-friendly app or website that allows me to quickly find the weather in my current location or city of my choice all over the world.
+   °   As a user, I want,
+
 
 # Technologies
 
 This project was developed with the following technologies:
 
 - API:
-     § OpenWeather
+     ° OpenWeather
 - Languages:
-     § JavaScript
-     § HTML
-     § CSS
+     ° JavaScript
+     ° HTML
+     °  CSS
 - Tools
-     § Visual Studio Code
-     § GitHub
-     § Gitpod
-     § Balsamiq
-- 
-# Existing Features
-![Alt text](images/image.png)
+     ° Visual Studio Code
+     ° GitHub
+     ° Gitpod
+     ° Balsamiq
 
-4.Footer Elements:
-A footer provided a consistent place for important links and information, making it easy for users to navigate or find essential details about the website. Which included copyright information and privacy policies.
+# Features
+When starting WeatherNow app:
+- User's ability to search cities
+- Temperatures and humidity
+- Wind speed and direction
+- your location will be detected via GPS (if you've given the app permission to do so)
+- Searching for a specific city Weather forecast for the current and comment 5 days.
+
+# Advanced Features (To be built if enought time):
+Advanced search for cities
+Geo Location API integration
+Celsius to Fahrenheit Conversion
+Sharable Content
+Offline Mode
+Include middleware to store the cities which the user accessed frequently
+Multi-language support (currently just English )
+
 
 # Benefits of WeatherNow
 Make confident decisions by using this awesome weather App in order to get the current weather forecast for any city. WeatherNow has loads of features. However, the following list is a glimpse of that huge features list:
@@ -72,8 +85,9 @@ We employed two testing tools to ensure the error-free nature of our code. we ut
 
 During the validation process, errors were detected, signifying areas for improvement. Recognizing and addressing these syntax errors is crucial for ongoing development, ensuring our code remains free of potential issues. Moving forward, we are committed to addressing identified problems and to uphold code quality.
 
-# Responsive Test
 
+
+# Responsive Test
 
 
 # Issues Fixed
@@ -110,9 +124,9 @@ We thank Code Institute for this learning opportunity
 
 # Authors
   ° Team Code Street
-   § Taylor CARR (Team Leader)
-   § Enoch  COLLINS
-   § Aubin KOENIGSSOHN
+   -  Taylor CARR (Team Leader)
+   -  Enoch  COLLINS
+   -  Aubin KOENIGSSOHN
 .
 
 
