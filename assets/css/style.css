@@ -14,20 +14,74 @@
   background: #000;
 } */
 
-/** nav logo**/
-
+/*new nav h1 and toggle button*/
 h1 {
-  background-color:black;
-  text-align: left;
-  padding: 10px 10px 10px 30px;
-  font-size: 3rem;
-  color:white;
-  font-family: 'Montserrat';
-  font-weight: 300;
-  /*text-decoration: underline;
-  text-decoration-thickness: 1px;*/
+    text-align: left;
+    padding: 10px 10px 10px 30px;
+    font-size: 3rem;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 300;
 }
 
+header {
+    background-color: black;
+    position: sticky;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.nav-bar {
+    position: absolute;
+    background-color: #ffffff;
+    width: 100%;
+    left: 0;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: none;
+    top: 100%;
+}
+
+
+.checkbox {
+    opacity: 0;
+    position: fixed;
+    top:20px;
+    left: 150px;
+}
+
+.label {
+    background-color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+}
+
+
+.label .ball {
+    height: 22px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(24px);
+}
+
+/*large current weather display*/
 .details {
   display: flex;
   flex-direction: column;
@@ -35,12 +89,15 @@ h1 {
   align-items: flex-start;
   width: 100%;
   position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .container {
   display: flex;
   gap: 35px;
   padding: 35px;
+ 
 }
 
 /* location input box*/
