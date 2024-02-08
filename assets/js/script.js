@@ -4,6 +4,7 @@ import onLoad from "../js/loadWindow.js";
 import { fiveDaysFocast } from "../js/fiveDaysFocast.js";
 import { toggleBackground } from "../js/toggleBackground.js";
 import { currentCityWeather } from "../js/currentLocationWeather.js";
+import { fiveDaysFocastCurrentWeather } from "./fiveDaysFocastCurrentWeather.js";
 
 const searchButton = document.querySelector(".search-btn");
 const currentCity = document.getElementById("location-btn");
@@ -39,15 +40,16 @@ function getWeatherData() {
         return;
       }
       displaydata(data);
+      fiveDaysFocast();
       resetInput();
     });
 }
 
 searchButton.addEventListener("click", () => {
   getWeatherData();
-  fiveDaysFocast();
 });
+
 window.addEventListener("load", onLoad);
-currentCity.addEventListener("click", currentCityWeather);
-window.addEventListener("load", fiveDaysFocast);
+currentCity.addEventListener("click", fiveDaysFocastCurrentWeather);
+window.addEventListener("load", fiveDaysFocastCurrentWeather);
 toggleButton.addEventListener("click", toggleBackground);
