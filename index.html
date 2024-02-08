@@ -20,9 +20,21 @@
     <title>WeatherNow</title>
   </head>
   <body>
-    <a href="index.html"><h1>WeatherNow</h1></a>
-    <div id="toggle-background" class=""><span></span></div>
-    <div class="container">
+    <header>
+      <a href="index.html">
+        <h1>WeatherNow</h1>
+      </a>
+      <nav>
+        <div>
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label for="chk" class="label">
+            <div class="ball"></div>
+          </label>
+        </div>
+      </nav>
+      <div id="toggle-background" class=""><span></span></div>
+    </header>
+    <main class="container">
       <div class="weather-input">
         <h3>Enter a City Here</h3>
         <input
@@ -51,7 +63,7 @@
         </div>
         <div class="days-forecast">
           <h2>
-            3 Hours Daily Forecast - Current City:
+            Daily Forecast (3 hourly) - Current City:
             <span id="current-city"></span>
           </h2>
           <p id="loading-data"></p>
@@ -89,13 +101,13 @@
           </ul>
         </div>
       </div>
-    </div>
+    </main>
+    <img
+      src="assets/images/Images_Hackathon2/images_weather/AdobeStock_633442832.jpeg"
+      width="100%"
+      alt="Weather"
+    />
     <footer>
-      <img
-        src="assets/images/Images_Hackathon2/images_weather/AdobeStock_633442832.jpeg"
-        width="100%"
-        alt="Weather"
-      />
       <div class="footer-container">
         <div class="socialIcons">
           <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -103,18 +115,8 @@
           <a href=""><i class="fa-brands fa-twitter"></i></a>
           <a href=""><i class="fa-brands fa-google-plus"></i></a>
           <a href=""><i class="fa-brands fa-github"></i></a>
-
-          <!--<img src="assets/images/Images_Hackathon2/images_weather/AdobeStock_633442832.jpeg" width="100%" alt="Weather">-->
-          <!--         <div class="footer-container">
-            <div class="socialIcons">
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa fa-git"></i></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-                <a href=""><i class="fa-brands fa-google-plus"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a> -->
         </div>
       </div>
-
       <img
         src="https://lms-juniper-staticfiles-codeinstitute.s3.eu-west-1.amazonaws.com/static/ci-theme/images/logo.e8a545c07759.png"
         width="70px"
@@ -124,6 +126,7 @@
         <p>
           &copy; 2024 - Designed by <span class="designer">Code Street</span>
         </p>
+        <p>&copy; 2024 - Designed by <span class="credit">Code Street</span></p>
       </div>
     </footer>
   </body>

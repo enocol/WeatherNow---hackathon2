@@ -13,23 +13,78 @@
   background: #000;
 } */
 
-/** nav logo**/
-
+/*new nav h1 and toggle button*/
 h1 {
   /* background-color: black;
   text-align: center;
   padding: 10px 10px 10px 10px; */
-  background-color: black;
+  /* background-color: black;
+  text-align: left;
+  padding: 10px 10px 10px 30px;
+  font-size: 3rem;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 300; */
+  /*text-decoration: underline;
+  text-decoration-thickness: 1px;*/
   text-align: left;
   padding: 10px 10px 10px 30px;
   font-size: 3rem;
   color: white;
   font-family: "Montserrat";
   font-weight: 300;
-  /*text-decoration: underline;
-  text-decoration-thickness: 1px;*/
 }
 
+header {
+  background-color: black;
+  position: sticky;
+  width: 100%;
+  box-shadow: 0 2px 2px #3a3a3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+/*position from right for toggle*/
+header nav div {
+  margin-right: 25px;
+}
+
+.checkbox {
+  opacity: 0;
+  position: fixed;
+  top: 5px;
+  margin-left: 50px;
+}
+
+.label {
+  background-color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+}
+
+.label .ball {
+  height: 22px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+/*large current weather display*/
 .details {
   display: flex;
   flex-direction: column;
@@ -37,6 +92,8 @@ h1 {
   align-items: flex-start;
   width: 100%;
   position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .container {
@@ -182,7 +239,7 @@ h1 {
   list-style: none;
   color: black;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  background-color: rgba(54, 54, 54, 0.562);
+  background-color: rgba(85, 85, 85, 0.274);
   padding: 8px;
   border-radius: 5px;
   margin: 1px;
@@ -285,6 +342,26 @@ h1 {
     flex-direction: column;
     align-items: center;
   }
+  h1 {
+    text-align: center;
+    padding: 20px 20px 20px 20px;
+    font-size: 30px;
+    color: white;
+    font-family: "Montserrat";
+    font-weight: 300;
+  }
+  header {
+    background-color: black;
+    position: sticky;
+    width: 100%;
+    box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  header nav div {
+    margin-right: 20px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -371,12 +448,54 @@ footer {
 }
 
 .designer {
+  font-weight: bold;
+}
+
+.credit {
+  color: #6c757d;
   opacity: 0.6;
   text-transform: uppercase;
   font-weight: 400;
   margin: 0px 2px;
 }
 
-.footer {
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: black;
+  padding: 20px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.socialIcons a {
+  margin: 0 10px;
+  background-color: black;
+  color: white;
+  /* Adjust spacing between social icons */
+}
+
+.socialIcons a:hover {
+  color: grey;
+  transition: 0.5s;
+}
+
+.footerBottom {
+  text-align: center;
+  font-size: 14px;
+  color: white;
+}
+
+.designer {
+  font-weight: bold;
+}
+
+.footer-container img {
+  display: none;
 }
