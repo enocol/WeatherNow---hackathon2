@@ -2,9 +2,13 @@ import displaydata from "../js/displayData.js";
 import { resetInput } from "../js/resetInput.js";
 import onLoad from "../js/loadWindow.js";
 import { fiveDaysFocast } from "../js/fiveDaysFocast.js";
+import { toggleBackground } from "../js/toggleBackground.js";
+import { currentCityWeather } from "../js/currentLocationWeather.js";
+import { fiveDaysFocastCurrentWeather } from "./fiveDaysFocastCurrentWeather.js";
 
 const searchButton = document.querySelector(".search-btn");
 const currentCity = document.getElementById("location-btn");
+const toggleButton = document.getElementById("toggle-background");
 
 function getWeatherData() {
   const cityInput = document.querySelector(".city-input");
@@ -14,8 +18,10 @@ function getWeatherData() {
   if (cityName === "") {
     const error = document.getElementById("error");
     error.textContent = "Please enter a city name";
+    error.style.backgroundColor = "#ee2e14";
     setTimeout(() => {
       error.textContent = "";
+      error.style.backgroundColor = "transparent";
     }, 2000);
     return;
   }
@@ -26,18 +32,24 @@ function getWeatherData() {
       if (data.cod >= "404" && data.cod < "500") {
         const error = document.getElementById("error");
         error.textContent = "City not found";
+        error.style.backgroundColor = "#ee2e14";
         setTimeout(() => {
           error.textContent = "";
+          error.style.backgroundColor = "transparent";
         }, 2000);
         return;
       }
       displaydata(data);
+      fiveDaysFocast();
       resetInput();
     });
 }
 
-searchButton.addEventListener("click", getWeatherData);
-window.addEventListener("load", onLoad);
-currentCity.addEventListener("click", fiveDaysFocast);
-window.addEventListener("load", fiveDaysFocast);
+searchButton.addEventListener("click", () => {
+  getWeatherData();
+});
 
+window.addEventListener("load", onLoad);
+currentCity.addEventListener("click", fiveDaysFocastCurrentWeather);
+window.addEventListener("load", fiveDaysFocastCurrentWeather);
+toggleButton.addEventListener("click", toggleBackground);
