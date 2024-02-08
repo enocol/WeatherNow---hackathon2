@@ -1,4 +1,7 @@
  # Weather Now App || Hackathon2_Team_Code.Street
+< img src="![Screenshot (WeatherNow)](https://github.com/Taylor-Carr/WeatherNow---hackathon2/assets/152321059/d67b3bff-4061-4ae1-9992-d92fb734b7b0)"width="125px" height="65px">
+
+
 Weather_Now App is a real-time weather app to check the weather in your current location and all over the world.It´s a simple, yet powerful app that gives you all the weather information you need, in a beautiful and easy-to-use interface. Weather is something difficult to predict.This accurate weather app allows to find out a essential detailed forecast wherever you are, for any time of the day.
 
 # Getting Started
@@ -10,7 +13,12 @@ Make sure you have the following installed: - Web browser - Code editor (e.g., V
  write the name of the city you wand to know the weather and  Click on the button search to have all informations.The Weather Icon will change between day and night depending on the information from the API.
 
 # UX
-Design
+- Design
+     § Wireframe : Balsalmiq
+
+  < img src="![WeatherNow_Wireframe](https://github.com/Taylor-Carr/WeatherNow---hackathon2/assets/152321059/705eeef3-a0db-4622-9091-3d4ec15e20ac)"width="125px" height="65px"> 
+ 
+
 
 Userstories 
 1. As a user, I want a user-friendly app or website that allows me to quickly find the weather in my current location or city of my choice all over the world.
