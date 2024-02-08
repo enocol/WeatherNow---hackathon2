@@ -195,10 +195,15 @@ h1 {
 }
 
 #error {
-  color: red;
+  color: #fff;
   margin-bottom: 20px;
-  height: 20px;
-  font-size: 25px;
+  height: 30px;
+  font-size: 15px;
+  width: 35%;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 #weather-condition {
@@ -220,10 +225,45 @@ h1 {
   margin-bottom: 20px;
 }
 
+#toggle-background {
+  font-size: small;
+  border: 2px solid #000;
+  position: relative;
+  top: 10px;
+  left: 90%;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+#toggle-background span {
+  border: 1px solid #000;
+  border-radius: 50%;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #000;
+  margin: 1px;
+}
+
 @media screen and (max-width: 616px) {
   h2,
   h3 {
     text-align: center;
+  }
+
+  #error {
+    width: 50%;
   }
 
   #weather-icon {

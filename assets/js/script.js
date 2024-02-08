@@ -2,9 +2,12 @@ import displaydata from "../js/displayData.js";
 import { resetInput } from "../js/resetInput.js";
 import onLoad from "../js/loadWindow.js";
 import { fiveDaysFocast } from "../js/fiveDaysFocast.js";
+import { toggleBackground } from "../js/toggleBackground.js";
+import { currentCityWeather } from "../js/currentLocationWeather.js";
 
 const searchButton = document.querySelector(".search-btn");
 const currentCity = document.getElementById("location-btn");
+const toggleButton = document.getElementById("toggle-background");
 
 function getWeatherData() {
   const cityInput = document.querySelector(".city-input");
@@ -14,8 +17,10 @@ function getWeatherData() {
   if (cityName === "") {
     const error = document.getElementById("error");
     error.textContent = "Please enter a city name";
+    error.style.backgroundColor = "#ee2e14";
     setTimeout(() => {
       error.textContent = "";
+      error.style.backgroundColor = "transparent";
     }, 2000);
     return;
   }
@@ -26,8 +31,10 @@ function getWeatherData() {
       if (data.cod >= "404" && data.cod < "500") {
         const error = document.getElementById("error");
         error.textContent = "City not found";
+        error.style.backgroundColor = "#ee2e14";
         setTimeout(() => {
           error.textContent = "";
+          error.style.backgroundColor = "transparent";
         }, 2000);
         return;
       }
@@ -36,8 +43,11 @@ function getWeatherData() {
     });
 }
 
-searchButton.addEventListener("click", getWeatherData);
+searchButton.addEventListener("click", () => {
+  getWeatherData();
+  fiveDaysFocast();
+});
 window.addEventListener("load", onLoad);
-currentCity.addEventListener("click", fiveDaysFocast);
+currentCity.addEventListener("click", currentCityWeather);
 window.addEventListener("load", fiveDaysFocast);
-
+toggleButton.addEventListener("click", toggleBackground);
