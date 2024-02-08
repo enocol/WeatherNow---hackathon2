@@ -25,6 +25,27 @@ export async function fiveDaysFocastCurrentWeather() {
     windSpeed[i].innerText = data.list[i].wind.speed;
     humidity[i].innerText = data.list[i].main.humidity;
     waitingData.innerText = "";
+
+    if (temperature[i].innerText < 5) {
+      temperature[i].style.color = "red";
+      temperature[i].style.fontWeight = "bold";
+    } else {
+      temperature[i].style.color = "green";
+    }
+
+    if (windSpeed[i].innerText > 5) {
+      windSpeed[i].style.color = "red";
+      windSpeed[i].style.fontWeight = "bold";
+    } else {
+      windSpeed[i].style.color = "green";
+    }
+
+    if (humidity[i].innerText > 90) {
+      humidity[i].style.color = "red";
+      humidity[i].style.fontWeight = "bold";
+    } else {
+      humidity[i].style.color = "green";
+    }
   }
   getDataLocal();
 }

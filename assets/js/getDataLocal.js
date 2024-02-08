@@ -9,6 +9,7 @@ export async function getDataLocal() {
     .then((response) => response.json())
     .then((data) => {
       displaydata(data);
+      console.log(data);
       //   fiveDaysFocast();
     });
 }

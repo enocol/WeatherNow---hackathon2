@@ -26,5 +26,6 @@ export async function fiveDaysFocast() {
     windSpeed[i].innerText = data.list[i].wind.speed;
     humidity[i].innerText = data.list[i].main.humidity;
     waitingData.innerText = "";
+    console.log("yes");
   }
 }
