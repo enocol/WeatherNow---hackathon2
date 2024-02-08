@@ -12,7 +12,6 @@ export async function currentCityWeather() {
     .querySelector(".city-input")
     .value.trim()
     .toLowerCase();
-  console.log(cityName);
   const apiKey = "a87753a0f261d957d6d0e8f464a72ec2";
   const queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
   const response = await fetch(queryURL);
