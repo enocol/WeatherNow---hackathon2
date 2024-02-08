@@ -33,27 +33,21 @@ header {
     justify-content: space-between;
     align-items: baseline;
 }
+/*position from right for toggle*/
+ header nav div {
+     margin-right: 25px;
+ }
 
-.nav-bar {
-    position: absolute;
-    background-color: #ffffff;
-    width: 100%;
-    left: 0;
-    box-shadow: 0 2px 2px #3a3a3a;
-    display: none;
-    top: 100%;
-}
-
-
+ 
 .checkbox {
     opacity: 0;
     position: fixed;
-    top:20px;
-    left: 150px;
+    top: 5px;
+    margin-left: 50px;
 }
 
 .label {
-    background-color: black;
+    background-color: white;
     border-radius: 50px;
     cursor: pointer;
     display: flex;
@@ -68,7 +62,7 @@ header {
 
 .label .ball {
     height: 22px;
-    background-color: white;
+    background-color: black;
     border-radius: 50%;
     position: absolute;
     top: 2px;
@@ -237,7 +231,7 @@ header {
   list-style: none;
   color: black;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  background-color: rgba(54, 54, 54, 0.562);
+  background-color: rgba(85, 85, 85, 0.274);
   padding: 8px;
   border-radius: 5px;
   margin: 1px;
@@ -301,6 +295,26 @@ header {
     align-items: center;
     
   }
+  h1 {
+      text-align: center;
+      padding: 20px 20px 20px 20px;
+      font-size: 30px;
+      color: white;
+      font-family: 'Montserrat';
+      font-weight: 300;
+  }
+  header {
+      background-color: black;
+      position: sticky;
+      width: 100%;
+      box-shadow: 0 2px 2px #3a3a3a;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+  }
+   header nav div {
+     margin-right: 20px;
+   }
 }
 
 @media (max-width: 768px) {
