@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Open Sans", sans-serif;
+  font-family: "lato", sans-serif;
   text-decoration: none;
 }
 
@@ -15,34 +16,25 @@
 
 /*new nav h1 and toggle button*/
 h1 {
-  /* background-color: black;
-  text-align: center;
-  padding: 10px 10px 10px 10px; */
-  /* background-color: black;
   text-align: left;
-  padding: 10px 10px 10px 30px;
+  padding: 10px;
   font-size: 3rem;
-  color: white;
-  font-family: "Montserrat";
-  font-weight: 300; */
-  /*text-decoration: underline;
-  text-decoration-thickness: 1px;*/
-  text-align: left;
-  padding: 10px 10px 10px 30px;
-  font-size: 3rem;
-  color: white;
-  font-family: "Montserrat";
-  font-weight: 300;
+  color: #fff;
+  font-family: "lato", sans-serif;
+  font-weight: 600;
 }
 
 header {
   background-color: black;
-  position: sticky;
+  position: fixed;
   width: 100%;
   box-shadow: 0 2px 2px #3a3a3a;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  z-index: 1000;
+  top: 0;
+  left: 0;
 }
 /*position from right for toggle*/
 header nav div {
@@ -100,6 +92,7 @@ header nav div {
   display: flex;
   gap: 35px;
   padding: 35px;
+  margin-top: 100px;
 }
 
 /* location input box*/
@@ -140,6 +133,20 @@ header nav div {
 .weather-input button:active {
   transform: translateY(1px);
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.blue-background {
+  background-color: #5372f0;
+  padding: 3px;
+  border-radius: 5px;
+  color: white;
+}
+
+#current-city {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 10px;
+  color: rgba(240, 35, 8, 0.726);
 }
 
 @keyframes bounce {
@@ -206,22 +213,13 @@ header nav div {
 
 .current-weather h2 {
   font-size: 1.8rem;
+  color: rgba(240, 35, 8, 0.726);
 }
 
 .weather-data h4 {
   margin-top: 12px;
   font-size: 1rem;
   font-weight: 600;
-}
-
-.current-weather .icon h4 {
-  margin-top: -10px;
-  text-transform: capitalize;
-}
-
-.current-weather .icon img {
-  max-width: 120px;
-  margin-top: -15px;
 }
 
 .days-forecast h2 {
@@ -286,7 +284,7 @@ header nav div {
 
 #toggle-background {
   font-size: small;
-  border: 2px solid #000;
+  border: 2px solid #fff;
   position: absolute;
   top: 25px;
   left: 90%;
@@ -307,7 +305,7 @@ header nav div {
 }
 
 #toggle-background span {
-  border: 1px solid #fff;
+  border: 1px solid #000;
   border-radius: 50%;
   display: inline-block;
   width: 20px;
@@ -379,20 +377,20 @@ header nav div {
   }
   h1 {
     text-align: center;
-    padding: 20px 20px 20px 20px;
-    font-size: 30px;
+    padding: 10px;
+    font-size: 20px;
     color: white;
     font-family: "Montserrat";
-    font-weight: 300;
   }
   header {
     background-color: black;
-    position: sticky;
+
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
     display: flex;
+
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
   }
   header nav div {
     margin-right: 20px;
@@ -402,6 +400,10 @@ header nav div {
     top: 10px;
     left: 80%;
     width: 50px;
+  }
+
+  .container {
+    margin-top: 50px;
   }
 }
 
