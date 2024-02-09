@@ -1,6 +1,21 @@
  # Weather Now App || Hackathon2_Team_Code.Street
 < img src="![Screenshot (WeatherNow)](https://github.com/Taylor-Carr/WeatherNow---hackathon2/assets/152321059/d67b3bff-4061-4ae1-9992-d92fb734b7b0)"width="125px" height="65px">
 
+# Overview
+This Hackathon2 project is about building a web application to show a weather forecast using weather API from external services like https://openweathermap.org . The user should be able to search for a specific location and toggle displaying the data.To use the app, place a name of the city and click on search.Alternatively click of the botton Weather Now to have Weather information of your current location.
+
+# Getting Started
+Make sure you have the following installed: - Web browser - Code editor (e.g., Visual Studio Code)
+Clone the repository
+Open the project in your code editor.
+Open index.html in your web browser to view the main page.
+
+# UX Design
+- Wireframe : Balsamiq.
+components used in the app are Title, Form, Cities, WeatherInfoContainer, WeatherInfoCard,images and footer.
+API for the weather information was provided by Open Weather Map this provides forecast details for the upcoming 5 days along with the current date.
+The WeatherInfoCard is only responsible to render the forecast information of a particular day and nothing else.
+
 
 Weather_Now App is a real-time weather app to check the weather in your current location and all over the world.It´s a simple, yet powerful app that gives you all the weather information you need, in a beautiful and easy-to-use interface. Weather is something difficult to predict.This accurate weather app allows to find out a essential detailed forecast wherever you are, for any time of the day.
 
@@ -12,13 +27,24 @@ Make sure you have the following installed: - Web browser - Code editor (e.g., V
    
  write the name of the city you wand to know the weather and  Click on the button search to have all informations.The Weather Icon will change between day and night depending on the information from the API.
 
-# UX
-- Design
-     ° Wireframe : Balsalmiq
+# Features
+When starting WeatherNow app:
+- User's ability to search cities
+- Temperatures and humidity
+- Wind speed and direction
+- your location will be detected via GPS (if you've given the app permission to do so)
+- Searching for a specific city Weather forecast for the current and comment 5 days.
 
   < img src="![WeatherNow_Wireframe](https://github.com/Taylor-Carr/WeatherNow---hackathon2/assets/152321059/705eeef3-a0db-4622-9091-3d4ec15e20ac)"width="125px" height="65px"> 
  
-
+# Advanced Features (To be built if enought time):
+Advanced search for cities
+Geo Location API integration
+Celsius to Fahrenheit Conversion
+Sharable Content
+Offline Mode
+Include middleware to store the cities which the user accessed frequently
+Multi-language support (currently just English )
 
 - Userstories 
    °  As a user, I want a user-friendly app or website that allows me to quickly find the weather in my current location or city of my choice all over the world.
@@ -41,23 +67,6 @@ This project was developed with the following technologies:
      ° Gitpod
      ° Balsamiq
 
-# Features
-When starting WeatherNow app:
-- User's ability to search cities
-- Temperatures and humidity
-- Wind speed and direction
-- your location will be detected via GPS (if you've given the app permission to do so)
-- Searching for a specific city Weather forecast for the current and comment 5 days.
-
-# Advanced Features (To be built if enought time):
-Advanced search for cities
-Geo Location API integration
-Celsius to Fahrenheit Conversion
-Sharable Content
-Offline Mode
-Include middleware to store the cities which the user accessed frequently
-Multi-language support (currently just English )
-
 
 # Benefits of WeatherNow
 Make confident decisions by using this awesome weather App in order to get the current weather forecast for any city. WeatherNow has loads of features. However, the following list is a glimpse of that huge features list:
@@ -69,14 +78,6 @@ Your current conditions.
 A 5-Day forecast.
 Switching to your current locations based on your computer's Location Services.
 
-# API Usage
-The WeatherNow App t uses the OpenWeatherMap API to get the current weather. OpenWeatherMap API is free to use for smaller-scale applications. Large applications with bigger user bases may need to opt into one of the paid plans in order to satisfy the higher call–per-minute needs. The free tier comes with the following restrictions:
-1,200 API calls per minute
-Weather history no greater than five day 
-95% up time
-Weather data updates every 3 hours
-No SSL
-If you need more calls per minute, increased up time, more frequent weather updates, or secured access, you’ll need to pay subscription. Regardless of which tier you decide to use, you need to register an API key for your application. To do this, register your application by signing up for an account. Once logged in, you can find the key under the setup tab. Since the API is public access, the key needs to be added as a parameter to whatever API endpoint you send a request to.
 
 # Testing
 We employed two testing tools to ensure the error-free nature of our code. we utilized validator testing tools, such as:
@@ -108,7 +109,6 @@ Ensured proper indentation and formatting for better code readability.
 # Deployment
 We deployed the project with the following steps:
 Access Repository Settings:
-1.	
 
 # issues
  Github functionality ( pull request and merge )
