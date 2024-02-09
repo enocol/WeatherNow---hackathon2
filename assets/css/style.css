@@ -287,14 +287,15 @@ header nav div {
 #toggle-background {
   font-size: small;
   border: 2px solid #000;
-  position: relative;
-  top: 10px;
+  position: absolute;
+  top: 25px;
   left: 90%;
   width: 50px;
   display: flex;
   align-items: center;
   border-radius: 20px;
   cursor: pointer;
+  background-color: white;
 }
 
 .justify-start {
@@ -341,6 +342,10 @@ header nav div {
   font-size: small;
   display: inline-block;
   text-align: center;
+}
+
+.socialIcons a i {
+  color: #000;
 }
 
 @media screen and (max-width: 616px) {
@@ -457,15 +462,19 @@ footer {
 
 .socialIcons {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .socialIcons a {
-  color: black;
+  /* color: black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   padding: 5px;
-  background-color: white;
-  margin: 1px 20px 0px 20px;
+  background-color: #bbb;
+
+  /* margin: 1px 20px 0px 20px; */
   border-radius: 50%;
 }
 
@@ -488,38 +497,28 @@ footer {
 }
 
 .credit {
-  color: #6c757d;
+  color: goldenrod;
   opacity: 0.6;
   text-transform: uppercase;
   font-weight: 400;
-  margin: 0px 2px;
+  /* margin: 0px 2px; */
+  font-weight: 600;
 }
 
 .footer-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   background-color: black;
-  padding: 20px;
+  padding: 10px;
+  justify-content: center;
 }
 
 .socialIcons {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 10px;
   color: white;
-}
-
-.socialIcons a {
-  margin: 0 10px;
-  background-color: black;
-  color: white;
-  /* Adjust spacing between social icons */
-}
-
-.socialIcons a:hover {
-  color: grey;
-  transition: 0.5s;
+  width: 100%;
 }
 
 .footerBottom {
@@ -532,6 +531,6 @@ footer {
   font-weight: bold;
 }
 
-.footer-container img {
+/* .footer-container img {
   display: none;
-}
+} */
