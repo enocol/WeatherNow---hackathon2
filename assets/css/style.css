@@ -237,13 +237,15 @@ header nav div {
   list-style: none;
   color: black;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  background-color: rgba(85, 85, 85, 0.274);
+  /* background-color: rgba(85, 85, 85, 0.274); */
+  background: rgba(0, 0, 0, 0.2)
+    url("../images/Images_Hackathon2/images_weather/AdobeStock_633442832.jpeg")
+    no-repeat center center/cover;
   padding: 8px;
   border-radius: 5px;
   margin: 10px 5px;
   width: 20%;
-  /* width: 98%; */
-  /* margin-bottom: 20px; */
+  border: 5px solid #fff;
 }
 
 .weather-cards .card img {
@@ -318,7 +320,7 @@ header nav div {
   color: #000;
   border-radius: 50%;
   padding: 5px;
-  font-size: small;
+  font-size: larger;
   display: inline-block;
   text-align: center;
 }
@@ -326,24 +328,33 @@ header nav div {
 .wind {
   color: #000;
   border-radius: 50%;
-  padding: 10px;
-  font-size: small;
+  padding: 5px;
+  font-size: larger;
   display: inline-block;
   text-align: center;
   position: relative;
 }
 
 .temp {
-  color: #000;
   border-radius: 50%;
   padding: 5px;
-  font-size: small;
+  font-size: larger;
   display: inline-block;
   text-align: center;
 }
 
 .socialIcons a i {
   color: #000;
+}
+
+.weather-cards h3 {
+  color: #000;
+  font-weight: 600;
+}
+
+.weather-cards h4 {
+  color: #000;
+  font-weight: 900;
 }
 
 @media screen and (max-width: 616px) {
@@ -368,13 +379,12 @@ header nav div {
   .weather-cards .card {
     width: 98%;
     margin-bottom: 20px;
-  }
-
-  .card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding-left: 10px;
   }
+
   h1 {
     text-align: center;
     padding: 10px;
@@ -523,7 +533,3 @@ footer {
 .designer {
   font-weight: bold;
 }
-
-/* .footer-container img {
-  display: none;
-} */
