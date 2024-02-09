@@ -484,12 +484,12 @@ footer {
 }
 
 .footerBottom {
-  color: white;
   transition: 0.4s;
   background-color: #fff;
-  text-align: center;
   padding: 10px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .designer {
@@ -498,11 +498,8 @@ footer {
 
 .credit {
   color: goldenrod;
-  opacity: 0.6;
   text-transform: uppercase;
-  font-weight: 400;
-  /* margin: 0px 2px; */
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .footer-container {
