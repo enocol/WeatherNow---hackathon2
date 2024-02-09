@@ -209,6 +209,8 @@ header nav div {
   display: flex;
   justify-content: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background: url("../images/Images_Hackathon2/images_weather/AdobeStock_241558736.jpeg")
+    no-repeat center center/cover;
 }
 
 .current-weather h2 {
@@ -239,7 +241,7 @@ header nav div {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   /* background-color: rgba(85, 85, 85, 0.274); */
   background: rgba(0, 0, 0, 0.2)
-    url("../images/Images_Hackathon2/images_weather/AdobeStock_633442832.jpeg")
+    url("../images/Images_Hackathon2/images_weather/AdobeStock_625572430.jpeg")
     no-repeat center center/cover;
   padding: 8px;
   border-radius: 5px;
@@ -348,13 +350,21 @@ header nav div {
 }
 
 .weather-cards h3 {
-  color: #000;
+  color: #fff;
   font-weight: 600;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .weather-cards h4 {
   color: #000;
   font-weight: 900;
+}
+
+#weather-icon {
+  right: 40%;
+  top: 20%;
 }
 
 @media screen and (max-width: 616px) {
@@ -365,11 +375,6 @@ header nav div {
 
   #error {
     width: 50%;
-  }
-
-  #weather-icon {
-    right: 5px;
-    top: 50px;
   }
 
   .weather-cards {
@@ -383,6 +388,11 @@ header nav div {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 10px;
+  }
+
+  #weather-icon {
+    right: 17%;
+    top: 25%;
   }
 
   h1 {
