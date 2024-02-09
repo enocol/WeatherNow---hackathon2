@@ -209,8 +209,7 @@ header nav div {
   display: flex;
   justify-content: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  background: url("../images/Images_Hackathon2/images_weather/AdobeStock_241558736.jpeg")
-    no-repeat center center/cover;
+  background: rgba(0, 0, 0, 0.2) no-repeat center center/cover;
 }
 
 .current-weather h2 {
@@ -240,9 +239,7 @@ header nav div {
   color: black;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   /* background-color: rgba(85, 85, 85, 0.274); */
-  background: rgba(0, 0, 0, 0.2)
-    url("../images/Images_Hackathon2/images_weather/AdobeStock_625572430.jpeg")
-    no-repeat center center/cover;
+  background: rgba(0, 0, 0, 0.2);
   padding: 8px;
   border-radius: 5px;
   margin: 10px 5px;
@@ -391,7 +388,7 @@ header nav div {
   }
 
   #weather-icon {
-    right: 17%;
+    right: 5%;
     top: 25%;
   }
 
