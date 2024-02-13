@@ -1,8 +1,9 @@
 import displaydata from "./displayData.js";
 import { resetInput } from "./resetInput.js";
+import { getCurrentCity } from "./getCurrentCity.js";
 
 function onLoad() {
-  const city = "DUBLIN";
+  const city = getCurrentCity();
   const apiKey = "a87753a0f261d957d6d0e8f464a72ec2";
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
   fetch(apiUrl)
@@ -17,7 +18,7 @@ function onLoad() {
         return;
       }
       displaydata(data);
-      resetInput();
+      // resetInput();
     });
 }
 

@@ -14,16 +14,14 @@ function displaydata(data) {
   if (data.weather[0].main === "Clouds") {
     img.src = "assets/images/Images_Hackathon2/Weather_icons/cloudy.png";
   } else if (data.weather[0].main === "Rain") {
-    img.src = "assets/images/Images_Hackathon2/Weather_icons/rain.png";
+    img.src = "assets/images/Images_Hackathon2/Weather_icons/rain.jpg";
   } else if (data.weather[0].main === "Clear") {
     img.src = "assets/images/Images_Hackathon2/Weather_icons/clear-sky.png";
   } else if (data.weather[0].main === "Snow") {
     img.src = "assets/images/Images_Hackathon2/Weather_icons/snowflake.png";
-    //   } else if (data.weather[0].main === "Mist")
-    //     document.getElementById("weather-icon").src = "assets/images/mist.png";
-  } else {
-    img.src = "";
-  }
+  } else if (data.weather[0].main === "Drizzle") {
+    img.src = "assets/images/Images_Hackathon2/Weather_icons/drizzle.png";
+  } else img.src = "";
 
   if (windSpeed.textContent > 5) {
     windSpeed.style.color = "red";
@@ -37,7 +35,7 @@ function displaydata(data) {
     humidity.style.color = "green";
   }
 
-  if (temperature.textContent < 5) {
+  if (temperature.textContent < 0) {
     temperature.style.color = "red";
   } else {
     temperature.style.color = "green";

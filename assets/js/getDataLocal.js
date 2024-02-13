@@ -9,6 +9,6 @@ export async function getDataLocal() {
     .then((response) => response.json())
     .then((data) => {
       displaydata(data);
-      //   fiveDaysFocast();
+      // fiveDaysFocast();
     });
 }

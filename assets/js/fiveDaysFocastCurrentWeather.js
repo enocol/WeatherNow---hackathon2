@@ -27,7 +27,7 @@ export async function fiveDaysFocastCurrentWeather() {
     waitingData.innerText = "";
 
     if (temperature[i].innerText < 5) {
-      temperature[i].style.color = "red";
+      temperature[i].style.color = "blue";
       temperature[i].style.fontWeight = "bold";
     } else {
       temperature[i].style.color = "green";
