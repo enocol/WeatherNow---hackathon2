@@ -1,6 +1,7 @@
  # WeatherNow App
 
  deployed Link https://enocol.github.io/WeatherNow---hackathon2/
+ 
 < img src="![Light Modus](https://github.com/Taylor-Carr/WeatherNow---hackathon2/assets/152321059/1cc082c9-5aad-4532-8b78-1fd816d737bd)
 "width="125px" height="65px">
 
